@@ -46,6 +46,10 @@ body {
   padding-top: 80px;
 }
 
+body.index {
+  padding-top: 0;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -167,6 +171,8 @@ footer .footer-copy {
 .banner {
   width: 100%;
   height: auto;
+  margin-top: 0;
+  padding-top: 0;
 }
 .banner img {
   width: 100%;
@@ -203,9 +209,19 @@ footer .footer-copy {
   align-items: center;
   padding: 60px;
 }
-.video .video-iframe iframe {
+.video .video-iframe {
+  position: relative;
   width: 100%;
-  height: 315px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video .video-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 .video .video-texto h2 {
@@ -269,6 +285,10 @@ footer .footer-copy {
     transform: translateY(0);
   }
 }
+header, .navbar {
+  margin-bottom: 0;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -343,7 +363,6 @@ footer .footer-copy {
   align-items: center;
   padding: 60px 20px;
   background-color: #f5f0e1;
-  min-height: 100vh;
   gap: 40px;
   text-align: center;
 }
@@ -395,12 +414,12 @@ footer .footer-copy {
   }
 }
 .servicios {
-  padding: 60px 20px;
+  padding: 60px 10px 0 10px;
   background-color: #faf7f2;
   text-align: center;
 }
 .servicios h1 {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Playfair Display", serif;
   color: #6f4e37;
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -408,56 +427,86 @@ footer .footer-copy {
 }
 .servicios .intro {
   font-size: 1.1rem;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   color: #333333;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif;
 }
 .servicios .grid-servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
-.servicios .grid-servicios .servicio-item {
+.servicios .card-servicio {
   background: white;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.servicios .grid-servicios .servicio-item img {
-  width: 60px;
+.servicios .card-servicio:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.servicios .card-servicio img {
+  width: 200px;
   margin-bottom: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
-.servicios .grid-servicios .servicio-item h2 {
-  font-size: 1.3rem;
-  font-family: "Playfair Display", serif !important;
-  font-weight: bold;
-  color: #6f4e37;
-  margin-bottom: 10px;
-}
-.servicios .grid-servicios .servicio-item p {
-  font-size: 0.95rem;
-  font-family: "Roboto", sans-serif !important;
-  color: #333333;
-}
-.servicios .grid-servicios .servicio-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+.servicios .card-servicio img:hover {
+  transform: scale(1.08);
 }
 
+.carrusel-servicios {
+  max-width: 1000px;
+  margin: 5px auto 0 auto;
+  padding-top: 0;
+  position: relative;
+  overflow: hidden;
+}
 .carrusel-servicios .carousel-inner img {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  display: block;
 }
-.carrusel-servicios .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%236f4e37' viewBox='0 0 8 8'%3e%3cpath d='M5.5 0L2 4l3.5 4L6.91 6.59 4.33 4l2.58-2.59L5.5 0z'/%3e%3c/svg%3e");
+.carrusel-servicios .carousel-control-prev,
+.carrusel-servicios .carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  position: absolute;
+  z-index: 2;
 }
-.carrusel-servicios .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%236f4e37' viewBox='0 0 8 8'%3e%3cpath d='M2.5 0L1.09 1.41 3.67 4 1.09 6.59 2.5 8l4-4-4-4z'/%3e%3c/svg%3e");
+.carrusel-servicios .carousel-control-prev span,
+.carrusel-servicios .carousel-control-next span {
+  background-color: rgba(111, 78, 55, 0.85);
+  border-radius: 50%;
+  padding: 15px;
+}
+.carrusel-servicios .carousel-control-prev {
+  left: 10px;
+}
+.carrusel-servicios .carousel-control-next {
+  right: 10px;
+}
+@media (max-width: 768px) {
+  .carrusel-servicios .carousel-control-prev {
+    left: 5px;
+  }
+  .carrusel-servicios .carousel-control-next {
+    right: 5px;
+  }
+  .carrusel-servicios .carousel-control-prev span,
+  .carrusel-servicios .carousel-control-next span {
+    padding: 10px;
+  }
 }
 
 .contacto {
@@ -653,7 +702,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
   flex: 1;
-  padding-top: 100px;
+  padding-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
