@@ -1,0 +1,39 @@
+@use "generales/variables" as v;
+@use "generales/header";
+@use "generales/footer";
+
+
+@use "page/inicio";
+@use "page/about";
+@use "page/gallery";
+@use "page/services";
+@use "page/contact";
+
+@use "generales/responsive";
+
+
+html, body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: v.$fuente-texto, sans-serif;
+  color: v.$color-texto;
+  line-height: 1.6;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: v.$fuente-titulos, serif;
+  color: v.$color-principal;
+  margin-top: 0;
+}
+
+
+main {
+  flex: 1;
+  padding-top: 100px;
+}

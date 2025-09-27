@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de Cafetería Aroma: café de especialidad, postres caseros y más.">
+  <title>Servicios | Cafetería Aroma</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6f4e37;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="medios/logo.png" alt="Logo Cafetería Aroma" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="servicios">
+      <h1>Nuestros Servicios</h1>
+      <p class="intro">En Cafetería Aroma queremos brindarte más que café: experiencias únicas.</p>
+
+      <div class="grid-servicios">
+        <div class="card-servicio">
+          <img src="medios/icono-cafe.png" alt="Café de Especialidad">
+          <h2>Café de Especialidad</h2>
+          <p>Granos seleccionados de fincas colombianas, preparados con métodos tradicionales y modernos.</p>
+        </div>
+
+        <div class="card-servicio">
+          <img src="medios/icono-postre.png" alt="Postres Caseros">
+          <h2>Postres Caseros</h2>
+          <p>Pasteles, galletas y repostería elaborada en casa para acompañar tu bebida favorita.</p>
+        </div>
+
+        <div class="card-servicio">
+          <img src="medios/icono-evento.png" alt="Eventos y Catering">
+          <h2>Eventos & Catering</h2>
+          <p>Organizamos momentos especiales con nuestro servicio de café y postres para tus reuniones.</p>
+        </div>
+
+        <div class="card-servicio">
+          <img src="medios/icono-ambiente.png" alt="Ambiente Acogedor">
+          <h2>Ambiente Acogedor</h2>
+          <p>Un lugar cálido para compartir con amigos, estudiar o disfrutar de un momento de calma.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carrusel-servicios my-5">
+      <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="medios/carrusel1.jpg" class="d-block w-100" alt="Imagen café 1">
+          </div>
+          <div class="carousel-item">
+            <img src="medios/carrusel2.jpg" class="d-block w-100" alt="Imagen café 2">
+          </div>
+          <div class="carousel-item">
+            <img src="medios/carrusel3.jpg" class="d-block w-100" alt="Imagen café 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <img src="medios/logo.png" alt="Logo Cafetería Aroma">
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre Nosotros</a>
+        <a href="gallery.html">Galería</a>
+        <a href="services.html">Servicios</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="medios/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="medios/icono-instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="medios/icono-whatsapp.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+
+    <p class="footer-copy">© 2025 Cafetería Aroma | Proyecto Final</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: v.$color-principal;
+
+  .navbar {
+    background-color: v.$color-principal;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    .navbar-brand {
+      img {
+        height: 45px;
+        max-width: 100%;
+      }
+    }
+
+    .nav-link {
+      font-family: v.$fuente-texto;
+      font-size: 1rem;
+      color: white;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s, border-bottom 0.3s;
+
+      &:hover {
+        color: v.$color-secundario;
+      }
+
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid v.$color-secundario;
+        padding-bottom: 3px;
+        color: v.$color-secundario;
+      }
+    }
+
+    .navbar-toggler {
+      border: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
+
+body {
+  padding-top: 80px;
+}
